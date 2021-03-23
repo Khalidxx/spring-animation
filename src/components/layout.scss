@@ -597,7 +597,6 @@ pre tt:after {
 }
 // End of autogeneratd css
 
-
 .page-container {
   padding: 0 3vw;
 }
@@ -605,7 +604,7 @@ pre tt:after {
 .footer-container {
   width: 100%;
   height: 5vh;
-  position:fixed;
+  position: fixed;
   bottom: 0;
   left: 0;
   background-color: #ff444f;
@@ -617,7 +616,7 @@ pre tt:after {
     text-decoration: none;
     font-size: 0.8rem;
     a {
-      color: rgb(24, 25, 26)
+      color: rgb(24, 25, 26);
     }
   }
 }
@@ -628,7 +627,7 @@ pre tt:after {
   background-color: #6309b8;
   border-radius: 5px;
   position: absolute;
-  // left: 10;
+  opacity: 0;
   z-index: 10;
 }
 
@@ -656,9 +655,24 @@ pre tt:after {
   position: absolute;
   left: 70vw;
   z-index: 10;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   border-bottom: 200px solid rgb(221, 217, 12);
+}
+
+.square--enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.square--enter-done {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.square--exit {
+
 }
